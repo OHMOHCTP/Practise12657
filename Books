@@ -1,0 +1,18 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Books {
+
+    HashMap<String,Boolean> book = new HashMap<>();
+
+    public void addBook(String Name, Boolean Availability) {
+
+        book.put(Name,Availability);
+
+    }
+
+
+
+
+}
