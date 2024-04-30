@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Users {
+
+    public static void main(String[] args) {
+
+        Users users = new Users();
+        users.Registration();
+
+    }
+    List<String> Username = new ArrayList<>();
+
+
+
+
+    public void Registration(){
+
+        Withdrawal_System Reg = new Withdrawal_System();
+        Users user = new Users();
+        System.out.println("To register your self, please enter your name");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" ");
+        user.Username.add(scanner.nextLine());
+        System.out.println("your name has been registered");
+        System.out.println(user.Username);
+        System.out.println("What would like to do next");
+
+        Reg.NewAction();
+
+    }
+
+
+
+
+}
