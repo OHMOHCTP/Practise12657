@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+
+
+public class Withdrawal_System {
+
+    Books bookManager = new Books();
+    Users Reg = new Users();
+
+
+
+    public static void main(String[] args) {
+
+
+        Books bookManager = new Books();
+        Withdrawal_System Withdraw = new Withdrawal_System();
+        Users Reg = new Users();
+
+
+        String Welcome_Message = "Hey there, welcome to our library, Input the following numbers for the corresponding action";
+
+        bookManager.addBook("HarryPotter 1", true);
+        bookManager.addBook("HarryPotter 2", true);
+        bookManager.addBook("HarryPotter 3", true);
+        bookManager.addBook("HarryPotter 4", true);
+
+        System.out.println("");
+        System.out.println(Welcome_Message);
+
+        System.out.println("1 | Book Options");
+        System.out.println("2 | WithDrawal");
+        System.out.println("3 | Return");
+        System.out.println("4 | Register");
+
+        System.out.println("");
+
+        Scanner scanner = new Scanner(System.in);
+
+        String answer_0 = scanner.nextLine();
+
+        if (answer_0.equals("1")) {
+
+            System.out.println("");
+            System.out.println(bookManager.book);
+
+
+        } else if (answer_0.equals("4")) {
+
+            Reg.Registration();
+
+
+        }
+
+
+
+
+    }
+
+    public void withdrawalP(){
+
+
+        Reg.Registration();
+        //Expected output is Success, but that's not quite the case
+
+
+    }
+
+
+    public void NewAction(){
+
+
+        System.out.println(" ");
+        System.out.println("1 | Book Options");
+        System.out.println("2 | WithDrawal");
+        System.out.println("3 | Return");
+        System.out.println("4 | Register");
+        System.out.println(" ");
+        Scanner scanner = new Scanner(System.in);
+        String answer = scanner.nextLine(); // Ask for what number the user wants to choose
+
+
+        if(answer.equals("1")){
+
+            Option1(); //
+
+        } else if (answer.equals("4")) {
+
+            Option4(); // Directs them to a method called Option 4
+
+        }
+
+
+    }
+
+    public void Option1(){
+
+
+        System.out.println(" ");
+        System.out.println(bookManager.book);
+
+    }
+
+
+    public void Option4(){
+
+
+        System.out.println(" ");
+        withdrawalP();
+
+
+
+    }
+}
